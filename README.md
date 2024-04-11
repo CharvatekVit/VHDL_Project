@@ -24,6 +24,7 @@ Arduino UNO je připojeno k desce Nexys pomocí USB a slouží pouze jako zdroj 
 
 Relé modul se skládá z dvou relé spínaných pomocí 5V signálu a základního obvodu pro signalizaci sepnutí pomocí LED.
 Spínací obvod i obě relé jsou osazeny na tištěném spoji. Pro ovládání a napájení slouží 4 piny. 2 pro +5V a GND a 2 pro spínání jednotlivých relé.
+https://www.hadex.cz/m436-prevodnik-logurovne-iici2c-5v-na-33v/
 
 ![rele_modul](images/rele_modul.jpg)
 
