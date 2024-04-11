@@ -1,9 +1,8 @@
 # VHDL_Project
 
 * Jakub Švaříček (responsible for ...)
-* Member 2 (responsible for ...)
-* Member 3 (responsible for ...)
-* Member 4 (responsible for ...)
+* Tereza Kalinová (responsible for ...)
+* Vít Charvátek (responsible for ...)
 
 ## Theoretical description and explanation
 
@@ -12,6 +11,14 @@ Cílem projektu bylo vytvořit audio syntezátor, který produkuje melodie za po
 ## Hardware description of demo application
 
 K vytovoření funkčního modelu byla použita deska Digilent Nexys A7-50T, dále bylo použito Arduino UNO, které sloužilo jako zdroj 5V napětí, dvoukanálový relé modul a propojovací vodiče.
+
+* Nexys A7-50T
+
+* Arduino UNO
+
+* Relé modul
+Relé modul se skládá z dvou relé spínaných pomocí 5V signálu a základního obvodu pro signalizaci sepnutí pomocí LED.
+Spínací obvod i obě relé jsou osazeny na tištěném spoji. Pro ovládání a napájení slouží 
 
 ## Software description
 
