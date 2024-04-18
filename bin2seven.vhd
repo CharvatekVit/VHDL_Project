@@ -18,15 +18,14 @@ begin
     begin
     
       if (clear = '1') then
-        seg <= "1111111";  -- Clear the display
+        seg <= "1111111";
       else
         case bin is
-          when x"4" =>     -- x"0" means "0000" in hexadec.
+          when x"4" =>
             seg <= "0000001";
           when x"0" =>
             seg <= "1001111";
     
-          -- WRITE YOUR CODE HERE
           when x"1" =>
             seg <= "0010010";
           when x"2" =>
