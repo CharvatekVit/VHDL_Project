@@ -22,20 +22,20 @@ begin
     begin
 
         if (rising_edge(clk)) then
-            if (rst = '1') then                 -- if high-active reset then
+            if (rst = '1') then
 
-                sig_count <= (others => '0');   -- Clear all bits of local counter
-                pulse <= '0';                   -- Set output `pulse` to low
+                sig_count <= (others => '0');
+                pulse <= '0';
 
             elsif (sig_count = PERIOD-1) then
-                sig_count <= (others => '0');   -- Clear all bits of local counter
-                pulse <= '1';                   -- Set output `pulse` to high
+                sig_count <= (others => '0');
+                pulse <= '1';
 
-            else                                -- else
-                sig_count <= sig_count + 1;     -- Increment local counter
-                pulse <= '0';                   -- Set output `pulse` to low
+            else                             
+                sig_count <= sig_count + 1;     
+                pulse <= '0';                
 
-            end if;                             -- Each `if` must end by `end if`
+            end if;                           
         end if;
 
     end process p_clk_enable;
