@@ -85,7 +85,7 @@ architecture Behavioral of top_level is
     end component;
     
     -- Component declaration for 
-    component bin2led is
+    component bin2seg is
     port (bin : in std_logic_vector(3 downto 0);
           leds : out std_logic_vector(15 downto 0);
           dalsi : in std_logic;
@@ -196,7 +196,7 @@ begin
         neg_edge => open,
         clean => open);
     -- 
-    LE : bin2led
+    LE : bin2seg
     port map(
         bin => sig_count,
         leds => LED,
