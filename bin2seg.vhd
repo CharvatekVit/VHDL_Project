@@ -32,14 +32,14 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity bin2led is
+entity bin2seg is
     Port ( bin : in STD_LOGIC_VECTOR (3 downto 0);
            leds : out STD_LOGIC_VECTOR (15 downto 0);
            dalsi : in STD_LOGIC;
            prev : in std_logic);
-end bin2led;
+end bin2seg;
 
-architecture Behavioral of bin2led is
+architecture Behavioral of bin2seg is
 
 begin
 
