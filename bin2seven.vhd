@@ -37,14 +37,12 @@ begin
             seg <= "0100100";
           when x"6" =>
             seg <= "0100000";
-          -- 2, 3, 4, 5, 6
     
           when x"7" =>
             seg <= "0001111";
           when x"8" =>
             seg <= "0000000";
     
-          -- WRITE YOUR CODE HERE
           when x"9" =>
             seg <= "0000100";
           when x"A" =>
@@ -55,7 +53,6 @@ begin
             seg <= "0110001";
           when x"D" =>
             seg <= "1000010";
-          -- 9, A, b, C, d
     
           when x"E" =>
             seg <= "0110000";
