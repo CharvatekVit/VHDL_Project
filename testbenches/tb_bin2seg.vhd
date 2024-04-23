@@ -130,6 +130,7 @@ begin
     wait for 50ns;
     assert sig_leds = "0000000000000000";
         report "leds aren't cleared" severity error;  
+    sig_dalsi <= '0';
         
     -- Test case 16
     sig_bin <= x"F";
@@ -140,7 +141,8 @@ begin
     sig_prev <= '1';
     wait for 50ns;
     assert sig_leds = "0000000000000000";
-        report "leds aren't cleared" severity error; 
+        report "leds aren't cleared" severity error;
+    sig_prev <= '0'; 
 
         wait;
     end process;
