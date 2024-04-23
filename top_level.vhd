@@ -55,7 +55,7 @@ architecture Behavioral of top_level is
     
     -- Component declaration for clock enable
     component clock_enable is
-    Generic( PERIOD : integer := 50000000);
+    Generic( PERIOD : integer := 12500000);
     Port ( clk : in STD_LOGIC;
            rst : in STD_LOGIC;
            pulse : out STD_LOGIC);
