@@ -34,7 +34,8 @@ begin
                 dalsi       => sig_dalsi,
                 prev        => sig_prev,
                 akt_melody  => sig_akt_melody,
-                clk         => sig_clk)
+                --pred_melody => sig_pred_melody,
+                clk         => sig_clk);
 
     TbClock <= not TbClock after TbPeriod/2 when TbSimEnded /= '1' else '0';
 
@@ -42,25 +43,22 @@ begin
 
     stimuli : process
     begin
-        sig_bin <= '0';
-        sig_rele <= '0';
+        sig_bin <= "0000";
         sig_dalsi <= '0';
         sig_prev <= '0';
-        sig_akt_melody <= '0';
+        wait for 50 ns;
 
         -- Testing if prev and dalsi decreases or increases akt_melody by 1
         sig_prev <= '1';
         wait for 10 ns;
         sig_prev <= '0';
-        wait for 100 ns;
+        wait for 40 ns;
         sig_dalsi <= '1';
         wait for 10 ns;
         sig_dalsi <= '0';
-        wait for 100 ns;
+        wait for 40 ns;
 
         -- Testing some melodies
-        sig_akt_melody <= "00";
-        wait for 50 ns;
         
         sig_bin <= "0000";
         wait for 50 ns;
@@ -68,20 +66,27 @@ begin
             report "0 does not match first note (0000)"
             severity error;
         
-        sig_bin <= "0001"
+        sig_bin <= "0001";
         wait for 50 ns;
         assert sig_rele = "0001"
             report "1 does not match second note (0001)"
             severity error;
         
-        sig_bin <= x"9";
+        sig_bin <= "1001";
         wait for 50 ns;
         assert sig_rele = "0011"
             report "9 does not match 9th note (0011)"
             severity error;
         
-        sig_akt_melody <= "10";
-        wait for 50 ns;
+        --sig_akt_melody <= "10";
+        sig_dalsi <= '1';
+        wait for 10 ns;
+        sig_dalsi <= '0';
+        wait for 40 ns;
+        sig_dalsi <= '1';
+        wait for 10 ns;
+        sig_dalsi <= '0';
+        wait for 40 ns;
 
         sig_bin <= "0000";
         wait for 50 ns;
@@ -89,7 +94,7 @@ begin
             report "0 does not match first note (0000)"
             severity error;
         
-        sig_bin <= "0001"
+        sig_bin <= "0001";
         wait for 50 ns;
         assert sig_rele = "0001"
             report "1 does not match second note (0001)"
