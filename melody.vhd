@@ -43,10 +43,10 @@ end melody;
 
 architecture Behavioral of melody is
 
-    signal sig_akt_melody : std_logic_vector(1 downto 0);
+    signal sig_akt_melody : std_logic_vector(1 downto 0) := "00";
     
 begin
-    --sig_akt_melody <= "00";
+    
     p_7seg_decoder : process (clk, dalsi, prev) is
     begin
        if rising_edge(clk) then
@@ -56,7 +56,7 @@ begin
           sig_akt_melody <= sig_akt_melody - 1;
         else
           case sig_akt_melody is
-            when x"0" =>        -- zacatek prvni melodie
+            when "00" =>        -- zacatek prvni melodie
               case bin is
                 when x"0" =>     -- x"0" means "0000" in hexadec.
                   rele(1) <= '0';
@@ -144,7 +144,7 @@ begin
                   rele(3) <= '0';
                   rele(4) <= '0';
               end case;        -- konec prvni melodie
-            when x"1" =>        -- zacatek druhe melodie
+            when "01" =>        -- zacatek druhe melodie
               case bin is
                 when x"0" =>     -- x"0" means "0000" in hexadec.
                   rele(1) <= '0';
@@ -232,7 +232,7 @@ begin
                   rele(3) <= '0';
                   rele(4) <= '0';
               end case;        -- konec druhe melodie
-            when x"2" =>        -- zacatek treti melodie
+            when "10" =>        -- zacatek treti melodie
               case bin is
                 when x"0" =>     -- x"0" means "0000" in hexadec.
                   rele(1) <= '0';
@@ -320,7 +320,7 @@ begin
                   rele(3) <= '0';
                   rele(4) <= '0';
               end case;        -- konec treti melodie
-            when x"3" =>        -- zacatek ctvrte melodie
+            when "11" =>        -- zacatek ctvrte melodie
               case bin is
                 when x"0" =>     -- x"0" means "0000" in hexadec.
                   rele(1) <= '0';
@@ -411,9 +411,8 @@ begin
             when others => null;
           end case;
         end if;
-      end if;    
-    end process p_7seg_decoder;
-
+      end if;
+    end process p_7seg_decoder;    
     akt_melody <= sig_akt_melody;
     
 end Behavioral;
