@@ -1,36 +1,6 @@
-
-----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
--- Create Date: 02/22/2024 01:11:44 PM
--- Design Name: 
--- Module Name: bin2seg - Behavioral
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
--- 
-----------------------------------------------------------------------------------
-
-
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
 
 entity bin2seg is
     Port ( bin : in STD_LOGIC_VECTOR (3 downto 0);
@@ -47,13 +17,13 @@ begin
     begin
     
       if (dalsi = '1') then
-        leds <= "0000000000000000";  -- Clear the display
-      elsif (prev = '1') then
-        leds <= "0000000000000000";  -- Clear the display
+        leds <= "0000000000000000"; 
+        elsif (prev = '1') then
+        leds <= "0000000000000000";
       else
       
         case bin is
-          when x"0" =>     -- x"0" means "0000" in hexadec.
+          when x"0" => 
             leds <= "1000000000000000";
           when x"1" =>
             leds <= "1100000000000000";
