@@ -1,8 +1,7 @@
 # VHDL_Project
-
-* Jakub Švaříček (responsible for ...)
-* Tereza Kalinová (responsible for ...)
-* Vít Charvátek (responsible for ...)
+* Jakub Švaříček
+* Tereza Kalinová
+* Vít Charvátek
 
 ## Teoretický popis
 
@@ -22,25 +21,50 @@ Arduino UNO je připojeno k desce Nexys pomocí USB a slouží pouze jako zdroj 
 
 * Relé modul
 
-Relé modul se skládá z dvou relé spínaných pomocí 5V signálu a základního obvodu pro signalizaci sepnutí pomocí LED.
-Spínací obvod i obě relé jsou osazeny na tištěném spoji. Pro ovládání a napájení slouží 4 piny. 2 pro +5V a GND a 2 pro spínání jednotlivých relé.
-https://www.hadex.cz/m436-prevodnik-logurovne-iici2c-5v-na-33v/
+Relé modul se skládá ze čtyř relé spínaných pomocí 5V signálu a základního obvodu pro signalizaci sepnutí pomocí LED.
+Spínací obvod i všechny relé jsou osazeny na tištěném spoji. Pro ovládání a napájení slouží 6 pinů. 2 pro +5V a GND a 4 pro spínání jednotlivých relé.
+
 
 ![rele_modul](images/rele_modul.jpg)
 
 ## Popis software
 
-Put flowchats/state diagrams of your algorithm(s) and direct links to source/testbench files in `src` and `sim` folders. 
+![top_level](images/toplevel.PNG)
+Schéma top level
+
 
 ### Simulace komponent
+![bin2seven](testbenches/images/bin2seven_tb.png)
+bin2seven
 
-Write descriptive text and put simulation screenshots of your components.
+Převádí binární kód na signál pro zobrazení na sedmi segmentovém displeji
+![clockenable](testbenches/images/clock_enable_tb.png)
+clock_enable
 
-## Instructions
+Generuje časový signál
+![debounce](testbenches/images/debounce_tb.png)
+debounce
 
-Write an instruction manual for your application, including photos and a link to a short app video.
+Generuje časový signál
+![pausePlay_tb.png](testbenches/images/pausePlay_tb.png)
+pausePlay
 
-## References
+Při stisku tlačítka zastaví melodii
+![tb_bin2seg.png](testbenches/images/tb_bin2seg.png)
+bin2seg
 
-1. Put here all references to sources and tools you used.
-2. ...
+![tb_melody.png](testbenches/images/tb_melody.png)
+melody
+
+Zde jsou zaznamenány jednotlivé melodie
+![tb_simple_counter.png](testbenches/images/tb_simple_counter.png)
+simple_counter
+
+16bitový čítač 
+
+
+## Ovládání
+Pomocí tlačítek na desce lze přepínat melodie, pozastavit přehrávání a přeskakovat o 4 doby.
+Na sedmi segmentovém displeji se zobrazuje číslo přehrávané melodie.
+16 LED na spodní části desky zobrazuje v jaké části melodie se momentálně nachází.
+
