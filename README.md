@@ -13,15 +13,17 @@ K vytovoření funkčního modelu byla použita deska Digilent Nexys A7-50T, dá
 
 * Nexys A7-50T
 
+  ![A7-50T](images/nexys-a7.png)
+
 * Arduino UNO
 
-Arduino UNO je připojeno k desce Nexys pomocí USB a slouží pouze jako zdroj 5V a 3.3V napětí. Na kontaktním nepájivem poli se také nachazí převodník logické úrovně 5V na 3.3V. Ten umožnuje ovládat relé modul, který požaduje pro sepnutí 5V pomocí desky Nexys, jejíž digitální výstupy mají pouze 3.3V.
+  Arduino UNO je připojeno k desce Nexys pomocí USB a slouží pouze jako zdroj 5V a 3.3V napětí. Na kontaktním nepájivem poli se také nachazí převodník logické úrovně 5V na 3.3V. Ten umožnuje ovládat relé modul, který požaduje pro sepnutí 5V pomocí desky Nexys, jejíž digitální výstupy mají pouze 3.3V.
 
 ![arduino_uno](images/arduino_uno.jpg)
 
 * Relé modul
 
-Relé modul se skládá ze čtyř relé spínaných pomocí 5V signálu a základního obvodu pro signalizaci sepnutí pomocí LED.
+  Relé modul se skládá ze čtyř relé spínaných pomocí 5V signálu a základního obvodu pro signalizaci sepnutí pomocí LED.
 Spínací obvod i všechny relé jsou osazeny na tištěném spoji. Pro ovládání a napájení slouží 6 pinů. 2 pro +5V a GND a 4 pro spínání jednotlivých relé.
 
 
