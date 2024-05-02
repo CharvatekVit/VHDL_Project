@@ -47,25 +47,45 @@ Schéma top level
 bin2seven
 
 Převádí binární kód na signál pro zobrazení na sedmi segmentovém displeji
+
+
+
 ![clockenable](testbenches/images/clock_enable_tb.png)
 clock_enable
 
 Generuje časový signál
+
+
+
 ![debounce](testbenches/images/debounce_tb.png)
 debounce
 
 Generuje časový signál
+
+
+
 ![pausePlay_tb.png](testbenches/images/pausePlay_tb.png)
 pausePlay
 
 Při stisku tlačítka zastaví melodii
+
+
+
 ![tb_bin2seg.png](testbenches/images/tb_bin2seg.png)
+
 bin2seg
+
+Zobrazuje pomocí LED průběh melodie
+
+
 
 ![tb_melody.png](testbenches/images/tb_melody.png)
 melody
 
 Zde jsou zaznamenány jednotlivé melodie
+
+
+
 ![tb_simple_counter.png](testbenches/images/tb_simple_counter.png)
 simple_counter
 
