@@ -97,3 +97,5 @@ Pomocí tlačítek na desce lze přepínat melodie, pozastavit přehrávání a 
 Na sedmi segmentovém displeji se zobrazuje číslo přehrávané melodie.
 16 LED na spodní části desky zobrazuje v jaké části melodie se momentálně nachází.
 
+Odkaz na video ukázku: https://youtu.be/_6wFDLz3TLw?si=lnhvDkqvGxWctiwJ
+
