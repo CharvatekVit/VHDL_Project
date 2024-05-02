@@ -5,7 +5,14 @@
 
 ## Teoretický popis
 
-Cílem projektu bylo vytvořit audio syntezátor, který produkuje melodie za použití relé.
+*  Cílem projektu bylo vytvořit audio syntezátor, který produkuje melodie za použití relé.
+*  Zvuk by měl produkovat relé modul připojený k Pmod konektorům.
+*  Vytvoření melodie za pomocí spínání a rozepínání
+*  Lze naprogramovat libovolnou melodii
+*  Navigace mezi melodiemi za pomocí tlačítek
+*  Číslo melodie zobrazit na segmentovém displeji
+*  Použít 16 LED pro zobrazení průběhu melodie
+
 
 ## Popis hardware použitého při porjektu
 
