@@ -1,7 +1,3 @@
--- Testbench automatically generated online
--- at https://vhdl.lapinoo.net
--- Generation date : 18.4.2024 11:51:07 UTC
-
 library ieee;
 use ieee.std_logic_1164.all;
 
